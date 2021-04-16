@@ -1,0 +1,15 @@
+[package]
+name = "lawliet"
+version = "0.1.0"
+authors = ["Yuki Okushi <jtitor@2k36.org>"]
+edition = "2018"
+description = "A tiny CLI-tool that plays sound following exit status"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+documentation = "https://docs.rs/lawliet"
+repository = "https://github.com/JohnTitor/lawliet"
+categories = ["command-line-utilities"]
+exclude = [".github"]
+
+[dependencies]
+rodio = { version = "0.11", default-features = false, features = ["mp3"] }
