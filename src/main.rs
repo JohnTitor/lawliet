@@ -4,14 +4,14 @@ use std::fs::File;
 use std::io::{self, BufReader, Write};
 use std::process;
 
-static LAWRIET_DIR: &str = "LAWLIET_DIR";
+static LAWLIET_DIR: &str = "LAWLIET_DIR";
 
 fn main() {
     let sound_dir =
-        env::var_os(LAWRIET_DIR).unwrap_or_else(|| panic!("`{}` must be set.", LAWRIET_DIR));
+        env::var_os(LAWLIET_DIR).unwrap_or_else(|| panic!("`{}` must be set.", LAWLIET_DIR));
     let sound_dir = sound_dir
         .to_str()
-        .unwrap_or_else(|| panic!("Failed to convert `{}` to `str`.", LAWRIET_DIR));
+        .unwrap_or_else(|| panic!("Failed to convert `{}` to `str`.", LAWLIET_DIR));
 
     let mut cmd: Vec<String> = env::args().collect();
     let output = if cmd.len() >= 3 {
